@@ -2,5 +2,7 @@ Aufgabe 1.1
 σ_Bestand<6
 
 Aufgabe 1.2
+π{KdStadt}Bestellung∪π{LiefStadt}Lieferant
 
-∪
+Aufgabe 1.3
+π{KdName}Bestellung - π{LiefName}Lieferant
