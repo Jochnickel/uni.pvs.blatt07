@@ -14,6 +14,37 @@ Aufgabe 1.4
 π{Name} σ{TNR ∈ π{TNR} σ{KdStadt='Ulm'} σ{LiefNr ∈ π{LiefNr} σ{LiefName='Rapp'} Lieferant} Bestellung} Teile
 
 1.6
-π{Name} σ{TNR ∈ π{TNR} σ((LiefNr, KdStadt) ∈ π{LiefNr, KdStadt:LiefStadt} Lieferant) Bestellung } Teile
+π{Name}
+σ{
+  TNR ∈ 
+  π{TNR} 
+  σ{
+    (LiefNr, KdStadt) ∈ 
+    π{LiefNr, KdStadt:LiefStadt}
+    Lieferant
+  }
+  Bestellung
+}
+Teile
 
 Aufgabe 2.1
+-----------------
+|  Bestellung   |
+-----------------
+|TNR|LiefNr|KdNr|
+-----------------
+
+---------------------
+|       Kunde       |
+---------------------
+|KdName|KdStadt|KdNr|
+---------------------
+
+Aufgabe 2.2
+π{Stadt:KdStadt}Bestellung = π{Stadt:KdStadt}Kunde
+π{Name:KdName}Bestellung = π{Name:KdName}Kunde
+σ{KdStadt='Ulm'} = σ{ KdNr ∈ π{KdNr} σ{KdStadt='Ulm'} Kunde }
+
+(LiefNr, KdStadt) ∈ π{LiefNr, KdStadt:LiefStadt} Lieferant = ??
+
+Aufgabe 2.3
