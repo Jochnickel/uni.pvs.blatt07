@@ -1,19 +1,19 @@
 Aufgabe 1.1
-σ_Bestand<6
+σ{Bestand<6} Teile
 
 Aufgabe 1.2
-π{KdStadt}Bestellung∪π{LiefStadt}Lieferant
+π{Stadt:KdStadt}Bestellung ∪ π{Stadt:LiefStadt}Lieferant
 
 Aufgabe 1.3
-π{KdName}Bestellung - π{LiefName}Lieferant
+π{Name:KdName}Bestellung - π{Name:LiefName} Lieferant
 
 Aufgabe 1.4
-π{LiefName,LiefStadt} Lieferant(LiefNr-Bestellung.LiefNr)
+π{LiefName,LiefStadt} σ{LiefNr ∈ (π{LiefNr}Lieferant - π{LiefNr}Bestellung) } Lieferant
 
 1.5
-π{Name} Teile( σ (_KdStadt=='Ulm' ∧ Liferant =='Rapp') TNR.Bestellung  )
+π{Name} σ{TNR ∈ π{TNR} σ{KdStadt='Ulm'} σ{LiefNr ∈ π{LiefNr} σ{LiefName='Rapp'} Lieferant} Bestellung} Teile
 
 1.6
-π{Name} Teile(TNR.KdStadt==TNR.LiefNr:Liefstadt)
+π{Name} σ{LiefNr ∈ } Teile
 
 Aufgabe 2.1
