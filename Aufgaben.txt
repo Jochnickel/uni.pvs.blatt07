@@ -48,3 +48,16 @@ Aufgabe 2.2
 (LiefNr, KdStadt) ∈ π{LiefNr, KdStadt:LiefStadt} Lieferant = ??
 
 Aufgabe 2.3
+π{Name}
+σ{
+  KdNr ∉
+  π{KdNr}
+  σ{
+    TNR ∈
+    π{TNR}
+    σ{Preis>=100€}
+    Teile
+  }
+  Bestellung
+}
+Kunde
